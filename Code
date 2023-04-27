@@ -1,0 +1,23 @@
+class  AddAllDigit{
+	public static void main(String[] args) {
+		int x =3655;       // Here we can take any number 
+		int sum=0;        //This variable for adding digits
+		int length=0;      // this variable for length of that number
+		int temp = x;      // This is for temp storing for that operation
+		while(temp>0){       //Here we taken this while loop for length of that number
+			length++;
+			temp = temp/10; 
+		}
+		System.out.println(length);
+		System.out.println(temp);
+		temp = x;
+		while(temp>0){                // Here for adding that digits and also extract last number.
+		for (int i=1;i<length;i++) {
+			int rem = temp%10;
+			sum =  sum+rem;
+			temp = temp/10;
+		}
+	  }
+	  System.out.println(sum);
+	}
+}
